@@ -1,9 +1,80 @@
-body {
+@font-face {
+    font-family: "DarkTechLDR";
+    src: url(fonts/darktech_ldr.ttf);
+}
 
-    margin: 0;
-    background: black;
+body {
+    margin: 0px;
+    background: #1f201d;
     color: whitesmoke;
-    text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    
+    text-align: left;
+}
+
+img{
+  width: 300px;
+  height: 300px;
+}
+
+h1{
+    font-family: "DarkTechLDR";
+    font-size: 48px;
+    margin:20px 0px;
+    word-wrap: normal;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 10%;
+    background-color: whitesmoke;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    text-align: center;
+  }
+  
+  li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+  
+  li a.active {
+    background-color: #1f201d;
+    color: whitesmoke;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #123524;
+    color: whitesmoke;
+  }
+/*Padding is with the Content.
+Border outlines the Padding Area.
+Margin sits outside the Border.*/
+
+.gridcontainer{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    background-color: #393631; 
+    padding: 20px;
+    color: whitesmoke;
+}
+
+.empti{
+    background-color: #123524;
+    text-align: center;
+    color: whitesmoke;
+    margin: 0px;
+}
+
+.scroller{
+    margin-left:10%;
+    padding:1px 16px;
+    height:1000px;
 }

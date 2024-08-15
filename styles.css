@@ -1,12 +1,36 @@
+:root{
+  --offblack: #111111;
+  --greyheavy: #212121;
+  --greymain: #303030;
+  --greylight: #424242;
+  --whiteone: #faf9f6;
+  --whitetwo: #f9f6ee;
+  --maroonred: #790507;
+  --phtalogreen: #113524;
+  --goldlight: #e29c36;
+}
 @font-face {
     font-family: "DarkTechLDR";
     src: url(fonts/darktech_ldr.ttf);
 }
 
+/*Black #111111 is for extra accents or status bars
+Grey Heavy #212121 is for Navbar or accented stuff
+Grey Main #303030 is for background
+Grey Light #424242 is for cards/dialogue/floatbox
+
+White One #faf9f6
+White Two #f9f6ee
+
+Gold One #e29c36
+Gold Two #b78427
+
+Maroon #790507*/
+
 body {
     margin: 0px;
-    background: #1f201d;
-    color: whitesmoke;
+    background: var(--greymain);
+    color: var(--whitetwo);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: left;
 }
@@ -28,7 +52,7 @@ ul {
     margin: 0;
     padding: 0;
     width: 10%;
-    background-color: whitesmoke;
+    background-color: var(--greyheavy);
     position: fixed;
     height: 100%;
     overflow: auto;
@@ -37,19 +61,20 @@ ul {
   
   li a {
     display: block;
-    color: #000;
+    color: var(--whitetwo);
     padding: 8px 16px;
     text-decoration: none;
   }
   
   li a.active {
-    background-color: #1f201d;
-    color: whitesmoke;
+    background-color: var(--greymain);
+    color: var(--whitetwo);
   }
-  
+
   li a:hover:not(.active) {
-    background-color: #123524;
-    color: whitesmoke;
+    background-color: var(--goldlight);
+    color: var(--offblack);
+    
   }
 /*Padding is with the Content.
 Border outlines the Padding Area.
@@ -57,19 +82,19 @@ Margin sits outside the Border.*/
 
 .gridcontainer{
     display: grid;
-    grid-template-columns: auto auto;
-    gap: 10px;
+    grid-template-columns: auto auto auto auto;
+    gap: 20px;
     align-items: center;
     justify-content: center;
-    background-color: #393631; 
+    background-color: var(--greylight); 
     padding: 20px;
-    color: whitesmoke;
+    color: var(--whitetwo);
 }
 
 .empti{
-    background-color: #123524;
+    background-color: var(--offblack);
     text-align: center;
-    color: whitesmoke;
+    color: var(--whitetwo);
     margin: 0px;
 }
 

@@ -78,3 +78,12 @@ Margin sits outside the Border.*/
     padding:1px 16px;
     height:1000px;
 }
+
+.bigimg{
+  width: auto;
+  height: 800px;
+  background-image: url("images/Destiny2.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 10px 0px;
+}

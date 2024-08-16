@@ -13,6 +13,17 @@
     font-family: "DarkTechLDR";
     src: url(fonts/darktech_ldr.ttf);
 }
+@keyframes pulse {
+0% {
+    box-shadow: 0 0 20px #e29c3680;
+}
+50% {
+    box-shadow: 0 0 40px #e29c36;
+}
+100% {
+    box-shadow: 0 0 20px #e29c3680;
+}
+}
 
 /*Black #111111 is for extra accents or status bars
 Grey Heavy #212121 is for Navbar or accented stuff
@@ -40,8 +51,8 @@ p{
 }
 
 img{
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  height: auto;
 }
 
 h1{
@@ -55,7 +66,7 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 10%;
+    width: 190px;
     background-color: var(--greyheavy);
     position: fixed;
     height: 100%;
@@ -93,7 +104,7 @@ Margin sits outside the Border.*/
     background-color: var(--greylight); 
     padding: 20px;
     color: var(--whitetwo);
-    grid-template-columns: repeat(auto-fill, 400px);
+    grid-template-columns: repeat(auto-fill, 300px);
 }
 
 .empti{
@@ -104,16 +115,10 @@ Margin sits outside the Border.*/
 }
 
 .scroller{
-    margin-left:10%;
+    margin-left:190px;
     padding:1px 16px;
-    height:auto;
 }
 
-.bigimg{
-  width: auto;
-  height: 800px;
-  background-image: url("images/Destiny2.webp");
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin: 10px 0px;
+img:hover:not(.exclude){
+  animation: pulse 6s infinite;
 }

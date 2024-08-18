@@ -15,13 +15,13 @@
 }
 @keyframes pulse {
 0% {
-    box-shadow: 0 0 20px #e29c3680;
+    box-shadow: 0 0 5px #f9f6ee80;
 }
 50% {
-    box-shadow: 0 0 40px #e29c36;
+    box-shadow: 0 0 10px #f9f6ee;
 }
 100% {
-    box-shadow: 0 0 20px #e29c3680;
+    box-shadow: 0 0 5px #f9f6ee80;
 }
 }
 
@@ -30,8 +30,8 @@ Grey Heavy #212121 is for Navbar or accented stuff
 Grey Main #303030 is for background
 Grey Light #424242 is for cards/dialogue/floatbox
 
-White One #faf9f6
 White Two #f9f6ee
+White One #faf9f6
 
 Gold One #e29c36
 Gold Two #b78427
@@ -104,7 +104,7 @@ Margin sits outside the Border.*/
     background-color: var(--greylight); 
     padding: 20px;
     color: var(--whitetwo);
-    grid-template-columns: repeat(auto-fill, 300px);
+    grid-template-columns: repeat(auto-fill, 250px);
 }
 
 .empti{
@@ -112,13 +112,13 @@ Margin sits outside the Border.*/
     text-align: center;
     color: var(--whitetwo);
     margin: 0px;
-}
+  }
 
 .scroller{
-    margin-left:190px;
-    padding:1px 16px;
+  margin-left:190px;
+  padding:1px 16px;
 }
 
 img:hover:not(.exclude){
-  animation: pulse 6s infinite;
+  animation: pulse 4s infinite;
 }

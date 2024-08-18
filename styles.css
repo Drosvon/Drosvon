@@ -44,6 +44,8 @@ body {
     color: var(--whitetwo);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: left;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 p{
@@ -56,8 +58,9 @@ img{
 }
 
 h1{
-    font-family: "DarkTechLDR";
+    font-family: "DarkTechLDR", Verdana, sans-serif;
     font-size: 3rem;
+    font-weight: 1;
     margin:20px 0px;
     word-wrap: normal;
 }

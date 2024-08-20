@@ -168,16 +168,6 @@
     z-index: 3;
   }
 
-h3{
-  font-family: "DarkTechLDR", Verdana, sans-serif;
-  font-weight: 1;
-}
-
-h4{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: 200;
-}
-
   .card-info-wrapper {
     align-items: center;
     display: flex;
@@ -194,12 +184,16 @@ h4{
   }
   
   .card-info-title > h3 {
-    font-size: 1.6em;
+    font-family: "DarkTechLDR", Verdana, sans-serif;
+    font-weight: 1;
+    font-size: 1.8rem;
     line-height: 8px;
   }
   
   .card-info-title > h4 {
     color: rgba(255, 255, 255, 0.4);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 200;
     font-size: 0.85em;
     margin-top: 8px;
   }

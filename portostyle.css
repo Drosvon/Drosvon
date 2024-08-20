@@ -1,3 +1,19 @@
+:root{
+  --offblack: #111111;
+  --greyheavy: #212121;
+  --greymain: #303030;
+  --greylight: #424242;
+  --whiteone: #faf9f6;
+  --whitetwo: #f9f6ee;
+  --maroonred: #790507;
+  --phtalogreen: #113524;
+  --goldlight: #e29c36;
+}
+@font-face {
+    font-family: "DarkTechLDR";
+    src: url(fonts/darktech_ldr.ttf);
+}
+
 .portfolio{
     align-items: center;
     background-color: var(--bg-color);
@@ -151,3 +167,40 @@
     height: 100%;
     z-index: 3;
   }
+
+h3{
+  font-family: "DarkTechLDR", Verdana, sans-serif;
+  font-weight: 1;
+}
+
+h4{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 200;
+}
+
+  .card-info-wrapper {
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-start;
+    padding: 0px 20px;
+  }
+  
+  .card-info {
+    align-items: flex-start;
+    display: flex;
+    gap: 10px;
+    overflow: hidden;
+  }
+  
+  .card-info-title > h3 {
+    font-size: 1.6em;
+    line-height: 8px;
+  }
+  
+  .card-info-title > h4 {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.85em;
+    margin-top: 8px;
+  }
+

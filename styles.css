@@ -44,8 +44,6 @@ body {
     color: var(--whitetwo);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: left;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
 p{
@@ -69,7 +67,7 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 190px;
+    width: calc(50px + 10%);
     background-color: var(--greyheavy);
     position: fixed;
     height: 100%;
@@ -118,7 +116,7 @@ Margin sits outside the Border.*/
   }
 
 .scroller{
-  margin-left:190px;
+  margin-left: calc(50px + 10%);;
   padding:1px 16px;
 }
 

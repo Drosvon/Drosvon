@@ -186,7 +186,7 @@
   .card-info-title > h3 {
     font-family: "DarkTechLDR", Verdana, sans-serif;
     font-weight: 1;
-    font-size: 1.8rem;
+    font-size: clamp(1rem, 2.5vw, 1.8rem);
     line-height: 8px;
   }
   
@@ -194,7 +194,7 @@
     color: rgba(255, 255, 255, 0.4);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 200;
-    font-size: 0.85em;
+    font-size: clamp(0.45rem, 1.6vw, 0.85rem);
     margin-top: 8px;
   }
 

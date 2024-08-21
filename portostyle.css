@@ -123,6 +123,7 @@
     .card {
       flex-shrink: 1;
       width: calc(50% - 4px);
+      height: 240px;
     }
   }
   

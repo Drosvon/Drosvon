@@ -1,0 +1,93 @@
+:root{
+    --offblack: #111111;
+    --greyheavy: #212121;
+    --greymain: #303030;
+    --greylight: #424242;
+    --whiteone: #faf9f6;
+    --whitetwo: #f9f6ee;
+    --maroonred: #790507;
+    --phtalogreen: #113524;
+    --goldlight: #e29c36;
+  }
+  @font-face {
+      font-family: "DarkTechLDR";
+      src: url(fonts/darktech_ldr.ttf);
+  }
+  @keyframes pulse {
+    0% {
+        box-shadow: 0 0 5px #f9f6ee80;
+    }
+    50% {
+        box-shadow: 0 0 10px #f9f6ee;
+    }
+    100% {
+        box-shadow: 0 0 5px #f9f6ee80;
+    }
+    }
+
+  body{
+    background-color: var(--greyheavy);
+    color: var(--whiteone);
+    word-break: break-all;
+    overflow: hidden;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  img{
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+  }
+  h1{
+    font-family: "DarkTechLDR", Verdana, sans-serif;
+    font-size: 3rem;
+    font-weight: 1;
+    line-height: 1.2em;
+    text-align: center;
+  }
+  ul {
+    display: flex;
+    gap: 10px;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    align-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    text-align: center;
+    align-items: center;
+  }
+  li a {
+    display: block;
+    color: var(--whitetwo);
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+  li a:hover{
+    animation: pulse 4s infinite;
+  }
+  
+  #shelf{
+    display: flex;
+    gap: 16px;  
+    justify-content: center;
+    align-items: center;
+  }
+  .book{
+    background-color: var(--greylight);
+    width: 100px;
+    height: 360px;
+    transition: width 1.2s;
+  }
+  .book:hover{
+    width: 360px;
+  }
+  #tags{
+    display: flex;
+    height: 40px;
+    justify-content: right;
+    align-items: center;
+    background-image: linear-gradient(to left, #424242ff 16%, #00000000 22%);
+  }

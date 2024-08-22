@@ -69,6 +69,10 @@
     gap: 16px;  
     justify-content: center;
     align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
   }
   #shelf:hover > .book::after {
     opacity: 1;
@@ -164,11 +168,16 @@
     height: 100%;
     z-index: 3;
   }
-
+  .hide{
+    display: none;
+  }
+  .book > a:hover + .hide{
+    display: block;
+  }
 
 
   /* Responsivity */
-  @media(max-width: 1000px) {
+  /* @media(max-width: 1000px) {
     body {
       align-items: flex-start;  
       overflow: auto;
@@ -221,6 +230,6 @@
     .card {
       width: 100%;
     }
-  }
+  } */
 
   

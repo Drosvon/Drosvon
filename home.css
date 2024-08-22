@@ -39,12 +39,13 @@
     -webkit-user-select: none;
     -ms-user-select: none;
   }
-  h1{
+  h3{
     font-family: "DarkTechLDR", Verdana, sans-serif;
-    font-size: 3rem;
+    font-size: 2.6rem;
     font-weight: 1;
     line-height: 1.2em;
     text-align: center;
+    margin: 0px;
   }
   ul {
     display: flex;
@@ -76,7 +77,11 @@
     align-items: center;
   }
   .book{
-    background-color: var(--greylight);
+    background-color: rgba(255, 255, 255, 0.33);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 10px;
     width: 100px;
     height: 360px;
     transition: width 1.2s;
@@ -84,10 +89,85 @@
   .book:hover{
     width: 360px;
   }
+  .book>.page{
+    background-color: var(--greylight);
+    border-radius: inherit;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    inset: 1px;
+    padding: 10px;
+    position: absolute;
+    z-index: 2;
+  }
+  .book-image{
+    align-items: center;
+    display: flex;
+    height: 160px;
+    justify-content: center;
+    overflow: hidden;
+    user-select: none;
+  }
   #tags{
     display: flex;
     height: 40px;
     justify-content: right;
     align-items: center;
     background-image: linear-gradient(to left, #424242ff 16%, #00000000 22%);
+  }
+
+  /* Responsivity */
+  @media(max-width: 1000px) {
+    body {
+      align-items: flex-start;  
+      overflow: auto;
+    }
+    
+    #cards {    
+      max-width: 1000px;
+      padding: 10px 0px;
+    }
+    
+    .card {
+      flex-shrink: 1;
+      width: calc(50% - 4px);
+      height: 240px;
+    }
+  }
+  
+  @media(max-width: 500px) {
+    .card {
+      height: 180px;
+    }
+    
+    .card-image {
+      height: 80px;  
+    }
+    
+    .card-image > i {
+      font-size: 3em;
+    }
+      
+    .card-info-wrapper {
+      padding: 0px 10px;
+    }
+    
+    .card-info > i { 
+      font-size: 0.8em; 
+    }
+    
+    .card-info-title > h3 {
+      font-size: 0.9em;
+    }
+  
+    .card-info-title > h4 {
+      font-size: 0.8em;
+      margin-top: 4px;
+    }
+  }
+  
+  @media(max-width: 320px) {
+    .card {
+      width: 100%;
+    }
   }

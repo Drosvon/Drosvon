@@ -24,6 +24,18 @@
         box-shadow: 0 0 5px #f9f6ee80;
     }
     }
+  @keyframes breathing{
+    0%{background-position:51% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:51% 0%}
+  }
+
+  .gradient{
+    background: linear-gradient(180deg, #111111, #303030);
+    background-size: 400% 400%;
+    background-attachment: fixed;
+    animation: breathing 16s ease infinite;
+}
 
   body{
     background-color: var(--greyheavy);
@@ -55,13 +67,25 @@
   li a {
     display: block;
     color: var(--whitetwo);
-    padding: 8px 16px;
+    padding: 0px 16px;
+    padding-top: 200px;
     text-decoration: none;
+    border-bottom: 2px double #ffffff;
   }
   li a:hover{
-    animation: pulse 4s infinite;
+    background: linear-gradient(180deg, #00000000, #424242);
+    background-size: 200% 200%;
+    animation: breathing 8s ease infinite;
   }
 
+  #tags{
+    display: flex;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+  }
 /*  */
 
   #shelf{
@@ -84,7 +108,7 @@
     position: relative;
     border-radius: 10px;
     width: 100px;
-    height: 360px;
+    height: 240px;
     transition: width 1.2s;
     cursor: pointer;
   }
@@ -130,6 +154,7 @@
     border-radius: inherit;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     flex-grow: 1;
     inset: 1px;
     padding: 10px;
@@ -144,37 +169,24 @@
     overflow: hidden;
     user-select: none;
   }
-  #tags{
-    display: flex;
-    height: 40px;
-    justify-content: right;
-    align-items: center;
-    background-image: linear-gradient(to left, #424242ff 16%, #00000000 22%);
-  }
   .book-title > h3 {
     font-family: "DarkTechLDR", Verdana, sans-serif;
     font-weight: 1;
     font-size: 1.8rem;
     line-height: 1.1em;
+    margin: 12px 0px;
   }
   .book-title > h4 {
     color: rgba(255, 255, 255, 0.4);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 200;
-    font-size: clamp(0.45rem, 1.6vw, 0.85rem);
+    font-size: 0.85rem;
     margin-top: 8px;
   }
   .book > a{
     height: 100%;
     z-index: 3;
   }
-  .hide{
-    display: none;
-  }
-  .book > a:hover + .hide{
-    display: block;
-  }
-
 
   /* Responsivity */
   /* @media(max-width: 1000px) {

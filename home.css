@@ -68,7 +68,6 @@
     display: block;
     color: var(--whitetwo);
     padding: 0px 16px;
-    padding-top: 200px;
     text-decoration: none;
     border-bottom: 2px double #ffffff;
   }
@@ -76,15 +75,14 @@
     background: linear-gradient(180deg, #00000000, #424242);
     background-size: 200% 200%;
     animation: breathing 8s ease infinite;
+    padding-top: 24px;
   }
 
   #tags{
     display: flex;
-    height: 200px;
+    height: 50px;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    left: 50%;
   }
 /*  */
 

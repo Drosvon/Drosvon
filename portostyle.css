@@ -44,13 +44,13 @@
   
   .card {
     background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-    cursor: pointer;
     display: flex;
-    height: 300px;
     flex-direction: column;
     position: relative;
+    border-radius: 10px;
+    height: 300px;
     width: 300px;  
+    cursor: pointer;
   }
   
   .card:hover::before {
@@ -123,6 +123,7 @@
     .card {
       flex-shrink: 1;
       width: calc(50% - 4px);
+      height: 240px;
     }
   }
   

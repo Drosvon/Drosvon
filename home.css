@@ -29,13 +29,45 @@
     50%{background-position:50% 100%}
     100%{background-position:51% 0%}
   }
+  @keyframes pan-overlay {
+    from {
+      background-position: 0% 0%;
+    }
+    
+    to {
+      background-position: 0% -100%;
+    }
+  }
 
   .gradient{
-    background: linear-gradient(180deg, #111111, #303030);
+    background: linear-gradient(180deg, var(--offblack), var(--greymain));
     background-size: 400% 400%;
     background-attachment: fixed;
     animation: breathing 16s ease infinite;
 }
+  .gradient-lines{
+    background: linear-gradient(
+      var(--greyheavy),
+      var(--greyheavy) 3px,
+      transparent 3px,
+      transparent 9px
+    );
+    background-size: 100% 9px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    animation: pan-overlay 22s infinite linear;
+  }
+  .vignette{
+    background: radial-gradient(ellipse at center, #11111100 40%,#11111111 60%,#111111ee 100%);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
 
   body{
     background-color: var(--greyheavy);

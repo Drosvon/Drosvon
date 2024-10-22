@@ -1,0 +1,144 @@
+:root{
+    --offblack: #111111;
+    --greyheavy: #212121;
+    --greymain: #303030;
+    --greylight: #424242;
+    --whiteone: #faf9f6;
+    --whitetwo: #f9f6ee;
+    --maroonred: #790507;
+    --phtalogreen: #113524;
+    --goldlight: #e29c36;
+  }
+  @font-face {
+      font-family: "DarkTechLDR";
+      src: url(fonts/darktech_ldr.ttf);
+  }
+  @keyframes pulse {
+    0% {
+        box-shadow: 0 0 5px #f9f6ee80;
+    }
+    50% {
+        box-shadow: 0 0 10px #f9f6ee;
+    }
+    100% {
+        box-shadow: 0 0 5px #f9f6ee80;
+    }
+    }
+  @keyframes breathing{
+    0%{background-position:51% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:51% 0%}
+  }
+  @keyframes pan-overlay {
+    from {
+      background-position: 0% 0%;
+    }
+    
+    to {
+      background-position: 0% -100%;
+    }
+  }
+  .gradient{
+    background: linear-gradient(180deg, var(--offblack), var(--greymain));
+    background-size: 400% 400%;
+    background-attachment: fixed;
+    animation: breathing 16s ease infinite;
+}
+  .gradient-lines{
+    background: linear-gradient(
+      var(--greyheavy),
+      var(--greyheavy) 3px,
+      transparent 3px,
+      transparent 9px
+    );
+    background-size: 100% 9px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    animation: pan-overlay 22s infinite linear;
+  }
+  .vignette{
+    background: radial-gradient(ellipse at center, #11111100 40%, #11111111 60%, #111111ee 100%);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+
+  body{
+    background-color: var(--greyheavy);
+    color: var(--whiteone);
+    word-break: break-all;
+    overflow: hidden;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  img{
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+  }
+  h1{
+    font-family: "DarkTechLDR", Verdana, sans-serif;
+    font-size: clamp(1.4rem, 4vw, 3rem);
+    font-weight: 1;
+    word-wrap: normal;
+  }
+  #shelf{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 80%;
+  }
+  .book{
+    background-color: var(--greymain);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  .cover{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+    overflow: hidden;
+    gap: 16px;
+    height: 80px;
+  }
+  .link{
+    width: 100%; 
+    height: 80px; 
+    position: absolute; 
+    z-index: 1;
+  }
+  .logo{
+    display: flex;
+    position: absolute;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    transform: translateX(10%) translateY(-30%);
+  }
+  .logo > img{
+    width: clamp(150px, 33%, 233px);
+  }
+  .links{
+    width: 100%; 
+    height: 80px; 
+    position: absolute; 
+    z-index: 1;
+  }

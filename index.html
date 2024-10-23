@@ -1,54 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
 
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drosvon</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="portfolio.css">
     <link rel="icon" href="data:,">
     <link rel="icon" type="image/x-icon" href="images/drosvon.svg">
-    
+
+    <title>Drosvon's Portfolio</title>
 </head>
-<body style="overflow: visible;">
-    <script src="/script.js"></script>
-    <!-- Start of Navbar-->
-    <ul>
-        <img src="images/drosvon.svg" alt="Logo" class="exclude">
-        <li><a class="active">Home</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="home.html">WIP</a></li>
-        <li><a href="#about">About</a></li>
-    </ul>
-    <!-- End of Navbar-->
 
-    <!-- Start of Scrollable Content-->
-    <div class="scroller">
-        <div>
-            <img src="images/Destiny2.webp" alt="ilovedestiny2" style="margin: 10px 0px;" class="exclude">
-        </div>
-
-        <h1>Hello</h1>
-        <p style="margin: 20px 0px;">I'm Drosvon and welcome to my site. <br> Luv ya.</p>
-
-        <h1 class="empti">I like these songs</h1>
-
-        <div class="gridcontainer">
-            <a href="https://open.spotify.com/track/3nEHrvNNtgLv9rneTAYVr4?si=e41dc26639834145"> 
-                <img src="images/SHM.webp" alt="Swedish House Mafia <3">
-            </a>
+<body class="gradient">
+    <div class="gradient-lines"></div>
+    <div class="vignette"></div>
+    <img src="images/drosvon.svg" alt="" style="width: 56px; z-index: 4; position: absolute; opacity: 33%;">
     
-            <a href="https://open.spotify.com/track/4w2GLmK2wnioVnb5CPQeex?si=4f1910e04a9b4e35">
-                <img src="images/bratcover.webp" alt="BRAT SUMMER">
-            </a>
-
-            <a href="https://open.spotify.com/track/6Pgkp4qUoTmJIPn7ReaGxL?si=c20f2f2415fd4ede">
-                <img src="images/avicii01.webp" alt="IloveAvicii">
-            </a>
+    <div id="shelf">
+        <div class="book">
+            <div class="logo"> 
+                <img src="images/bluesky.svg" alt="Bluesky">
+            </div>
+            <a href="https://drosvon.bsky.social" class="links"></a>
+            <div class="cover">
+                <h1>BlUesky</h1>
+            </div>
         </div>
-
+        <div class="book">
+            <div class="logo"> 
+                <img src="images/artstation.svg" alt="Artstation">
+            </div>
+            <a href="https://www.artstation.com/drosvon" class="links"></a>
+            <div class="cover">
+                <h1>Artstation</h1>
+            </div>
+        </div>
     </div>
 
-    <!-- End of Scrollable Content-->
 </body>
 </html>
